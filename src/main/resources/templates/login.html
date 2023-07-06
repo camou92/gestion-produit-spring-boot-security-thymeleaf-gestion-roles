@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" type="text/css" href="webjars/bootstrap/5.2.0/css/bootstrap.min.css"/>
+  <link rel="stylesheet" type="text/css" href="webjars/bootstrap-icons/1.10.3/font/bootstrap-icons.css">
+</head>
+<body>
+
+  <main class="container mt-5">
+    <div class="p-1 text-center bg-light">
+      <h1 class="mb-3">Login</h1>
+     </div>
+      <form th:action="@{login}" method="post">
+        <div class="form-group">
+          <label for="username" class="form-label">Username : </label>
+          <input type="text" id="username" name="username" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="password" class="form-label">Price : </label>
+          <input type="text" id="password" name="password" class="form-control">
+        </div>
+        <br>
+        <div class="form-check mb-3">
+          <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" name="remember-me"> Remember me
+          </label>
+        </div>
+        <div>
+          <input type="submit" class="btn btn-primary" value="Login">
+        </div>
+      </form>
+  </main>
+</body>
+</html>
